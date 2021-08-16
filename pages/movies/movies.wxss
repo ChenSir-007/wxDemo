@@ -1,0 +1,28 @@
+/* pages/movies/movies.wxss */
+.movie-list {
+  margin-bottom: 30rpx;
+}
+
+page {
+  background-color: #f2f2f2;
+}
+
+.ex-search-bar {
+  height: 90rpx !important;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 30rpx;
+}
+
+.movie {
+  margin-bottom: 30rpx;
+}
+
+.search-container>i {
+  width: 200rpx;
+}

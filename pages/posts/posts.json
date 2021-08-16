@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-icon":"/miniprogram_npm/lin-ui/icon",
+    "post":"/components/post/index"
+  },
+  "navigationBarTitleText": "文与字",
+  "enablePullDownRefresh": true
+}

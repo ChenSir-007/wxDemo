@@ -1,0 +1,6 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <l-avatar placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}" size="180" />
+  <text class="motto">Hello,八月</text>
+  <button class="journey-container" plain bindtap="onTap">开启新的一天</button>
+</view>

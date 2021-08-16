@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="author-date">
+    <text class="author">{{postData.detail.author_name}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{postData.detail.date}}</text>
+  </view>
+  <text class="title">{{postData.detail.title}}</text>
+  <view class="tool">
+    <view class="circle">
+      <image wx:if="{{!collected}}" src="/images/icon/collection-anti.png" bindtap="onCollect" />
+      <image wx:else src="/images/icon/collection.png" bindtap="onCollect" />
+      <image bindtap="onShare" src="/images/icon/share.png" />
+    </view>
+    <view class="horizon" />
+  </view>
+  <rich-text nodes="{{postData.content}}" class="detail"></rich-text>
+</view>

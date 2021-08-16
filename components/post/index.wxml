@@ -1,0 +1,18 @@
+<view class="post-container">
+  <view class="post-author-date">
+    <text>{{list.author_name}}</text>
+    <text class="post-date">{{list.date}}</text>
+  </view>
+  <text data-id="{{list.uniquekey}}" class="post-title" bindtap="onGoToDetail">{{list.title}}</text>
+  <swiper autoplay indicator-dots="{{isShowDots}}" circular interval="3000">
+    <swiper-item>
+      <image src="{{list.thumbnail_pic_s}}"></image>
+    </swiper-item>
+    <swiper-item wx:if="{{list.thumbnail_pic_s02}}">
+      <image src="{{list.thumbnail_pic_s02}}"></image>
+    </swiper-item>
+    <swiper-item wx:if="{{list.thumbnail_pic_s03}}">
+      <image src="{{list.thumbnail_pic_s03}}"></image>
+    </swiper-item>
+  </swiper>
+</view>

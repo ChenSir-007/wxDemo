@@ -1,0 +1,34 @@
+/* pages/welcome/welcome.wxss */
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #b3d4db;
+  height: 100vh;
+}
+
+l-avatar {
+  margin-top: 160rpx;
+}
+open-data{
+  font-size: 32rpx !important;
+  font-weight: bold !important;
+}
+
+.motto {
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.journey-container {
+  color: #666;
+  border: 1px solid #405f80;
+  width: 200rpx;
+  height: 80rpx;
+  font-size: 22rpx;
+  padding: 0;
+  line-height: 80rpx;
+  font-weight: bold;
+  margin-top: 200rpx;
+}

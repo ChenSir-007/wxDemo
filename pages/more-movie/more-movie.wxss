@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 30rpx;
+}
+
+.movie {
+  margin-bottom: 30rpx;
+}
+
+.container>i {
+  width: 200rpx;
+}
+
+/* todo 解决样式排布问题 */

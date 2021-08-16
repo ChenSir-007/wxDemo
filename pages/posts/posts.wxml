@@ -1,0 +1,6 @@
+<!--pages/posts/posts.wxml-->
+<view>
+  <block wx:for="{{posts}}" wx:for-item="item" wx:key="postId">
+    <post bindposttap="onGoToDetail" list="{{item}}" />
+  </block>
+</view>
