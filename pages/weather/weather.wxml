@@ -42,13 +42,19 @@
       <view class="title">生活指数</view>
       <view class="list">
         <view class="item" wx:for="{{suggestion}}" wx:key="i">
-          <view class="wrap">
+          <view class="wrap" bindtap="onTab" data-suggestion="{{item}}">
             <view class="icon">
               <image src="{{ suggestionIcon[item.type] }}"></image>
             </view>
             <text class="status">{{item.brf}}</text>
           </view>
         </view>
+      </view>
+    </view>
+    <!-- 生活指数详情遮罩层 -->
+    <view class="mask" wx:if="{{showsuggestion}}" bindtap="close" catchtouchmove="maskTouchMove">
+      <view class="content-container" wx:if="{{showsuggestion}}" catchtouchmove='touchMove'>
+        <text>{{suggestiondetail.txt}}</text>
       </view>
     </view>
     <!-- 详情 -->

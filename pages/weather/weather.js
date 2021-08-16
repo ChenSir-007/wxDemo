@@ -89,7 +89,8 @@ Page({
       temperature: "/images/image/detail/temperature.svg",
       humidity: "/images/image/detail/humidity.svg",
     },
-    show: true,
+    show: true, //显示加载中图标
+    showsuggestion: false, //显示天气建议
     prompt: "Loading ...", // 页面的初始数据
     lodingsrc: "/images/image/location/umbrella.svg",
     air: {
@@ -102,8 +103,22 @@ Page({
       qlty: '空气质量',
       so2: '二氧化硫',
     },
-    hourly: []
+    hourly: [],
+    suggestiondetail: {}
   },
+  onTab(e) {
+    this.setData({
+      showsuggestion: true,
+      suggestiondetail: e.currentTarget.dataset.suggestion
+    })
+  },
+  close() {
+    this.setData({
+      showsuggestion: false
+    })
+  },
+  maskTouchMove() {},
+  touchMove() {},
   getUserLocation() { // 获取用户当前经纬度
     wx.getLocation({
       type: 'gcj02',
@@ -195,6 +210,7 @@ Page({
         key: '9b88e317475943c495cb5b60e35991b4'
       },
       success: (res) => {
+        console.log(res.data.HeWeather6[0].lifestyle);
         let suggestion = res.data.HeWeather6[0].lifestyle
         this.setData({
           suggestion
@@ -260,7 +276,7 @@ Page({
         this.getWeather()
         this.getNowWeather()
         this.getLifestyle()
-        this.getHourly()　
+        this.getHourly()
       }
     }
   },

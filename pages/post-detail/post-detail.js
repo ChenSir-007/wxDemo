@@ -25,7 +25,6 @@ Page({
       },
       success: (res) => {
         const data = res.data.result
-        console.log(data);
         this.setData({
           postData: data
         })
